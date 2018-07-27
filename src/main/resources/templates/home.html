@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+    <head>
+        <meta charset="UTF-8">
+        <title>home</title>
+    </head>
+    <body>
+        home
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="email" name="email" placeholder="email">
+            <input type="file" name="file" placeholder="">
+            <input type="submit" name="" placeholder="">
+        </form>
+
+
+        <div>
+            <img th:each="image:${images}"
+                 th:src="@{${image}}" alt="">
+
+        </div>
+    </body>
+</html>
